@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Quick Fix Dent Repair</title>
+    <meta name="description" content="Expert dent repair in Eustis, FL. Paint and body work by Chris Hurley.">
+    
+    {% include styles.html %}
+</head>
+<body>
 
+    <header>
+        <div class="container nav-flex">
+            <a href="/" class="logo">
+                <img src="/assets/img/logo.png" alt="Quick Fix Dent Repair Logo" class="logo-img">
+            </a>
+            <nav class="nav-links">
+                <a href="#work">Our Work</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#videos">Videos</a>
+                <a href="#contact" class="btn btn-sm">Get Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Quick Fix <span class="text-green">Dent Repair</span></h3>
+            <p>919 S Bay St, Eustis, FL 32726</p>
+            <p><a href="tel:+13522550145" class="text-green"><i class="fas fa-phone"></i> (352) 255-0145</a></p>
+            
+            <div style="margin: 20px 0;">
+                <a href="https://www.facebook.com/profile.php?id=100083550301741" target="_blank" style="font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="http://instagram.com/officail_qf/" target="_blank" style="font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #666;">&copy; 2024 Quick Fix Dent Repair. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
