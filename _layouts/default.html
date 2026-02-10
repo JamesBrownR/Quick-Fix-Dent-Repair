@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Quick Fix Dent Repair</title>
-    <meta name="description" content="Expert dent repair in Eustis, FL. Paint and body work by Chris Hurley.">
-    
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
     {% include styles.html %}
 </head>
 <body>
@@ -13,13 +12,13 @@
     <header>
         <div class="container nav-flex">
             <a href="/" class="logo">
-                <img src="/assets/img/logo.png" alt="Quick Fix Dent Repair Logo" class="logo-img">
+                <img src="/assets/img/logo.png" alt="Quick Fix Dent Repair" class="logo-img">
             </a>
             <nav class="nav-links">
-                <a href="#work">Our Work</a>
-                <a href="#reviews">Reviews</a>
-                <a href="#videos">Videos</a>
-                <a href="#contact" class="btn btn-sm">Get Quote</a>
+                <a href="/">Home</a>
+                <a href="/services.html">Services</a>
+                <a href="/#gallery">Gallery</a> 
+                <a href="/contact.html" class="btn btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
@@ -39,7 +38,7 @@
                 <a href="http://instagram.com/officail_qf/" target="_blank" style="font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
             </div>
             
-            <p style="font-size: 0.8rem; color: #666;">&copy; 2024 Quick Fix Dent Repair. Designed for Excellence.</p>
+            <p style="font-size: 0.8rem; color: #666;">© {{ site.time | date: '%Y' }} Quick Fix Dent Repair.</p>
         </div>
     </footer>
 
