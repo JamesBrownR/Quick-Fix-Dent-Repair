@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "What to Do After a Fender Bender: A Step-by-Step Guide"
+title: "What to Do After a Fender Bender... A Step-by-Step Guide"
 date: 2025-01-29
 author: Chris Hurley
 categories: [tips, collision-repair]
