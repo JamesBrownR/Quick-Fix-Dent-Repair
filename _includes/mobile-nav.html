@@ -1,0 +1,240 @@
+<!-- Mobile Navigation Enhancement -->
+<style>
+  /* Mobile Menu Toggle Button */
+  .mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 2px solid var(--brand-green);
+    color: var(--brand-green);
+    font-size: 1.5rem;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .mobile-menu-toggle:hover {
+    background: var(--brand-green);
+    color: var(--brand-dark);
+  }
+  
+  /* Mobile Menu Overlay */
+  .mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .mobile-nav-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  .mobile-nav-content {
+    position: relative;
+    max-width: 400px;
+    height: 100%;
+    background: var(--brand-dark);
+    border-right: 3px solid var(--brand-green);
+    padding: 80px 40px 40px 40px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .mobile-nav-overlay.active .mobile-nav-content {
+    transform: translateX(0);
+  }
+  
+  .mobile-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: 2px solid var(--brand-green);
+    color: var(--brand-green);
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mobile-close:hover {
+    background: var(--brand-green);
+    color: var(--brand-dark);
+    transform: rotate(90deg);
+  }
+  
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .mobile-nav-links a {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    transition: all 0.3s;
+  }
+  
+  .mobile-nav-links a:hover {
+    color: var(--brand-green);
+    padding-left: 10px;
+  }
+  
+  .mobile-nav-links .btn {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .mobile-contact-info {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+  }
+  
+  .mobile-contact-info p {
+    color: var(--text-dim);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-contact-info a {
+    color: var(--brand-green);
+  }
+  
+  .mobile-social {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .mobile-social a {
+    font-size: 1.8rem;
+    color: var(--brand-green);
+    transition: 0.3s;
+  }
+  
+  .mobile-social a:hover {
+    color: var(--text-light);
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-menu-toggle {
+      display: block;
+    }
+    
+    .nav-links {
+      display: none !important;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-nav-overlay {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create mobile menu HTML
+    const mobileMenuHTML = `
+      <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+          <button class="mobile-close" id="mobileClose">×</button>
+          
+          <nav class="mobile-nav-links">
+            <a href="/">Home</a>
+            <a href="/services">Services</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/reviews">Reviews</a>
+            <a href="/blog">Blog</a>
+            <a href="/contact" class="btn btn-fill">Contact Us</a>
+          </nav>
+          
+          <div class="mobile-contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 919 S Bay St, Eustis, FL 32726</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+13522550145">(352) 255-0145</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:quickfix1111@yahoo.com">quickfix1111@yahoo.com</a></p>
+            
+            <div class="mobile-social">
+              <a href="https://www.facebook.com/profile.php?id=100083550301741" target="_blank">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="http://instagram.com/officail_qf/" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Add mobile menu to body
+    document.body.insertAdjacentHTML('beforeend', mobileMenuHTML);
+    
+    // Create and add toggle button to header
+    const navFlex = document.querySelector('.nav-flex');
+    const toggleButton = document.createElement('button');
+    toggleButton.className = 'mobile-menu-toggle';
+    toggleButton.id = 'mobileMenuToggle';
+    toggleButton.innerHTML = '<i class="fas fa-bars"></i>';
+    navFlex.appendChild(toggleButton);
+    
+    // Get elements
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileToggle = document.getElementById('mobileMenuToggle');
+    const mobileClose = document.getElementById('mobileClose');
+    
+    // Toggle menu
+    function openMenu() {
+      mobileNav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+      mobileNav.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    
+    // Event listeners
+    mobileToggle.addEventListener('click', openMenu);
+    mobileClose.addEventListener('click', closeMenu);
+    
+    // Close when clicking outside
+    mobileNav.addEventListener('click', function(e) {
+      if (e.target === mobileNav) {
+        closeMenu();
+      }
+    });
+    
+    // Close when clicking a link
+    const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+  });
+</script>
