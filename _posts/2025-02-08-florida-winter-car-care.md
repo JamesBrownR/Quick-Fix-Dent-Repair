@@ -1,9 +1,7 @@
 ---
 layout: blog
-title: "Florida Winter Car Care: Yes, You Still Need It"
-date: 2025-02-08
+title: "Florida Winter Car Care? Yes, You Still Need It"
 author: Chris Hurley
-categories: [maintenance, tips]
 excerpt: "Think Florida winters are too mild to worry about your car? Think again. Here's how to protect your vehicle during the cooler months."
 ---
 
