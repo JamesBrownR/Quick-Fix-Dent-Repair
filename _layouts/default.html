@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} | Quick Fix Dent Repair</title>
-    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/logo.png">
     {% include styles.html %}
 </head>
 <body>
 
     <header>
         <div class="container nav-flex">
-            <a href="/" class="logo">
-                <img src="/assets/img/logo.png" alt="Quick Fix Dent Repair" class="logo-img">
+            <a href="{{ site.baseurl }}/" class="logo">
+                <img src="{{ site.baseurl }}/assets/img/logo.png" alt="Quick Fix Dent Repair" class="logo-img">
             </a>
             <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="/services.html">Services</a>
-                <a href="/#gallery">Gallery</a> 
-                <a href="/contact.html" class="btn btn-sm">Contact Us</a>
+                <a href="{{ site.baseurl }}/">Home</a>
+                <a href="{{ site.baseurl }}/services">Services</a>
+                <a href="{{ site.baseurl }}/#gallery">Gallery</a> 
+                <a href="{{ site.baseurl }}/contact" class="btn btn-sm">Contact Us</a>
             </nav>
         </div>
     </header>
