@@ -7,8 +7,8 @@ title: Home
     <div class="container hero-content">
         <h1 class="text-green">RESTORE THE GLORY</h1>
         <p style="font-size: 1.2rem; margin-bottom: 2rem;">Premier Paint, Body & Dent Repair in Eustis, FL.</p>
-        <a href="/contact.html" class="btn btn-fill">Get a Free Quote</a>
-        <a href="/services.html" class="btn">View Services</a>
+        <a href="{{ site.baseurl }}/contact" class="btn btn-fill">Get a Free Quote</a>
+        <a href="{{ site.baseurl }}/services" class="btn">View Services</a>
     </div>
 </section>
 
@@ -41,7 +41,7 @@ title: Home
         <div class="video-scroller">
             {% for video in site.data.videos %}
             <a href="{{ video.link }}" target="_blank" class="video-card">
-                <img src="{{ video.thumb }}" style="height:100%; width:100%; object-fit:cover; opacity: 0.6;">
+                <img src="{{ site.baseurl }}/{{ video.thumb }}" style="height:100%; width:100%; object-fit:cover; opacity: 0.6;">
                 <div class="video-overlay">
                     <i class="fab fa-instagram text-green" style="font-size: 2rem;"></i>
                     <p>{{ video.title }}</p>
@@ -58,7 +58,7 @@ title: Home
         <div class="gallery-grid">
             {% for item in site.data.gallery limit:8 %}
             <div class="gallery-item">
-                <img src="{{ item.image }}" alt="{{ item.alt }}">
+                <img src="{{ site.baseurl }}/{{ item.image }}" alt="{{ item.alt }}">
             </div>
             {% endfor %}
         </div>
