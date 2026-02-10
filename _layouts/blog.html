@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Quick Fix Dent Repair Blog</title>
+    <meta name="description" content="{{ page.excerpt }}">
+    <link rel="icon" type="image/png" href="/assets/img/logo.png">
+    {% include styles.html %}
+    <style>
+        /* Blog-specific styles */
+        .blog-header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0 60px 0;
+            border-bottom: 3px solid var(--brand-green);
+        }
+        
+        .blog-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .blog-meta {
+            color: var(--text-dim);
+            margin-bottom: 10px;
+        }
+        
+        .blog-meta span {
+            margin-right: 20px;
+        }
+        
+        .blog-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            color: var(--brand-green);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .blog-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 20px;
+            margin-left: 30px;
+        }
+        
+        .blog-content li {
+            margin-bottom: 10px;
+            list-style: disc;
+        }
+        
+        .blog-content strong {
+            color: var(--brand-green);
+            font-weight: 600;
+        }
+        
+        .blog-content a {
+            color: var(--brand-green);
+            text-decoration: underline;
+        }
+        
+        .blog-content a:hover {
+            color: var(--text-light);
+        }
+        
+        .blog-content hr {
+            border: 0;
+            border-top: 1px solid #333;
+            margin: 40px 0;
+        }
+        
+        .blog-cta {
+            background: var(--brand-gray);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid var(--brand-green);
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .blog-cta h3 {
+            margin-bottom: 20px;
+        }
+        
+        .categories {
+            margin-top: 10px;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: #222;
+            padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 0.85rem;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            color: var(--brand-green);
+            border: 1px solid #333;
+        }
+        
+        .back-to-blog {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--text-dim);
+            transition: 0.3s;
+        }
+        
+        .back-to-blog:hover {
+            color: var(--brand-green);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <div class="container nav-flex">
+            <a href="/" class="logo">
+                <img src="/assets/img/logo.png" alt="Quick Fix Dent Repair" class="logo-img">
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services">Services</a>
+                <a href="/blog">Blog</a>
+                <a href="/contact" class="btn btn-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="blog-header">
+        <div class="container">
+            <a href="/blog" class="back-to-blog"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+            <h1 class="blog-title">{{ page.title }}</h1>
+            <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> {{ page.date | date: "%B %d, %Y" }}</span>
+                <span><i class="far fa-user"></i> {{ page.author }}</span>
+            </div>
+            {% if page.categories %}
+            <div class="categories">
+                {% for category in page.categories %}
+                <span class="category-tag">{{ category }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <article class="blog-content">
+        {{ content }}
+        
+        <div class="blog-cta">
+            <h3>Need Auto Body or Dent Repair?</h3>
+            <p>We're here to help get your vehicle back to perfect condition.</p>
+            <a href="/contact" class="btn btn-fill">Get Your Free Quote</a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <h3>Quick Fix <span class="text-green">Dent Repair</span></h3>
+            <p>919 S Bay St, Eustis, FL 32726</p>
+            <p><a href="tel:+13522550145" class="text-green"><i class="fas fa-phone"></i> (352) 255-0145</a></p>
+            
+            <div style="margin: 20px 0;">
+                <a href="https://www.facebook.com/profile.php?id=100083550301741" target="_blank" style="font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="http://instagram.com/officail_qf/" target="_blank" style="font-size: 1.5rem; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #666;">© {{ site.time | date: '%Y' }} Quick Fix Dent Repair. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
