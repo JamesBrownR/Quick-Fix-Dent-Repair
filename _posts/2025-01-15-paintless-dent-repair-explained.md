@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Paintless Dent Repair: The Magic Behind the Method"
+title: "Paintless Dent Repair... (The Magic Behind the Method)"
 date: 2025-01-15
 author: Chris Hurley
 categories: [dent-repair, techniques]
