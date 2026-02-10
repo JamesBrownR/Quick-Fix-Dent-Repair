@@ -12,7 +12,7 @@ title: Gallery
     <div class="gallery-grid">
         {% for item in site.data.gallery %}
         <div class="gallery-item">
-            <img src="/{{ item.image }}" alt="{{ item.alt }}">
+            <img src="{{ site.baseurl }}/{{ item.image }}" alt="{{ item.alt }}">
         </div>
         {% endfor %}
     </div>
@@ -20,6 +20,6 @@ title: Gallery
     <div style="text-align: center; margin-top: 60px; padding: 40px; background: #1a1a1a; border-radius: 10px; border-left: 4px solid var(--brand-green);">
         <h3 style="margin-bottom: 20px;">Ready to restore your vehicle?</h3>
         <p style="margin-bottom: 30px; color: #ccc;">Every project starts with a free quote. Let's bring your car back to life.</p>
-        <a href="/contact.html" class="btn btn-fill">Get Your Free Quote</a>
+        <a href="{{ site.baseurl }}/contact" class="btn btn-fill">Get Your Free Quote</a>
     </div>
 </div>
