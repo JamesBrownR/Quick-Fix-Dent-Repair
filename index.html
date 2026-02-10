@@ -41,7 +41,15 @@ title: Home
         <div class="video-scroller">
             {% for video in site.data.videos %}
             <a href="{{ video.link }}" target="_blank" class="video-card">
-                <img src="{{ site.baseurl }}/{{ video.thumb }}" style="height:100%; width:100%; object-fit:cover; opacity: 0.6;">
+                <video 
+                    autoplay 
+                    loop 
+                    muted 
+                    playsinline
+                    style="height:100%; width:100%; object-fit:cover; opacity: 0.6;">
+                    <source src="{{ site.baseurl }}/{{ video.thumb }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
                 <div class="video-overlay">
                     <i class="fab fa-instagram text-green" style="font-size: 2rem;"></i>
                     <p>{{ video.title }}</p>
