@@ -4,7 +4,7 @@ title: "The Art and Science of Perfect Paint Matching"
 date: 2025-01-22
 author: Chris Hurley
 categories: [paint, techniques]
-excerpt: "Getting a perfect color match isn't luck—it's a combination of advanced technology, quality materials, and an experienced eye. Here's how we do it."
+excerpt: "Getting a perfect color match isn't luck. It's a combination of advanced technology, quality materials, and an experienced eye. Here's how we do it."
 ---
 
 You've probably seen it before: a "repaired" car where the new paint doesn't quite match the old. Maybe it's a shade too light, or slightly different in metallic flake. It's one of those things that, once you notice it, you can't unsee it.
