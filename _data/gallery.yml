@@ -1,4 +1,4 @@
-- image: /assets/img/QFDR1.webp
+- image: Pics/QFDR1.webp
   alt: "lorem ipsum truck fender fix"
 - image: /assets/img/QFDR2.webp
   alt: "dolor sit amet dent removal"
@@ -56,5 +56,5 @@
   alt: "sit amet consectetur adipisci velit"
 - image: /assets/img/QFDR29.webp
   alt: "sed quia non numquam eius modi"
-- image: /assets/img/QFDR30.webp
+- image: Pics/QFDR30.webp
   alt: "tempora incidunt ut labore et dolore"
