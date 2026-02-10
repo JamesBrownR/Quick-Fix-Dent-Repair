@@ -1,1 +1,90 @@
-i
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+    <div class="container hero-content">
+        <h1 class="text-green">RESTORE THE GLORY</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Premier Paint, Body & Dent Repair in Eustis, FL.</p>
+        <a href="/contact.html" class="btn btn-fill">Get a Free Quote</a>
+        <a href="/services.html" class="btn">View Services</a>
+    </div>
+</section>
+
+<section id="services-teaser" style="background: #111;">
+    <div class="container" style="text-align:center;">
+        <h2 class="section-title">What We <span class="text-green">Do</span></h2>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div style="flex: 1; min-width: 250px; background: #0a0a0a; padding: 20px; border: 1px solid #333;">
+                <i class="fas fa-car-crash text-green" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <h3>Dent Repair</h3>
+                <p>From door dings to major crunches.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px; background: #0a0a0a; padding: 20px; border: 1px solid #333;">
+                <i class="fas fa-spray-can text-green" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <h3>Paint Matching</h3>
+                <p>Seamless color matching and blending.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px; background: #0a0a0a; padding: 20px; border: 1px solid #333;">
+                <i class="fas fa-tools text-green" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                <h3>Body & Trim</h3>
+                <p>Full exterior restoration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="videos">
+    <div class="container">
+        <h2 class="section-title">Latest <span class="text-green">Videos</span></h2>
+        <div class="video-scroller">
+            {% for video in site.data.videos %}
+            <a href="{{ video.link }}" target="_blank" class="video-card">
+                <img src="{{ video.thumb }}" style="height:100%; width:100%; object-fit:cover; opacity: 0.6;">
+                <div class="video-overlay">
+                    <i class="fab fa-instagram text-green" style="font-size: 2rem;"></i>
+                    <p>{{ video.title }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="gallery" style="background: #111;">
+    <div class="container">
+        <h2 class="section-title">Recent <span class="text-green">Work</span></h2>
+        <div class="gallery-grid">
+            {% for item in site.data.gallery limit:8 %}
+            <div class="gallery-item">
+                <img src="{{ item.image }}" alt="{{ item.alt }}">
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <p>We have done hundreds of cars.</p>
+        </div>
+    </div>
+</section>
+
+<section id="reviews">
+    <div class="container">
+        <h2 class="section-title">5-Star <span class="text-green">Reputation</span></h2>
+        <div class="reviews-grid">
+            {% for review in site.data.reviews limit:3 %}
+            <div class="review-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-style: italic; margin-bottom: 15px;">"{{ review.text }}"</p>
+                <h4 class="text-green">- {{ review.name }}</h4>
+                <small style="color: #666;">{{ review.date }}</small>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://g.page/r/CUEwAAU1QygLEAE" target="_blank" class="btn">Read All Google Reviews</a>
+        </div>
+    </div>
+</section>
